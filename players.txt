@@ -1,0 +1,44 @@
+Name: Player
+Shirt Name: Player
+Number: 9
+Foot: L
+Positions: CF* CF, AMF, SS
+Injury Tolerance: A
+Age: 27
+Height: 171
+Weight: 70
+Form: 7
+Weak Foot Accuracy: 3
+Weak Foot Frequency: 7
+Attack Awareness: 3
+Defence Awareness: 1
+
+Stats:
+  Attack: 79
+  Defence: 44
+  Header Accuracy: 95
+  Dribble Accuracy: 90
+  Short Pass Accuracy: 89
+  Short Pass Speed: 76
+  Long Pass Accuracy: 99
+  Long Pass Speed: 98
+  Shot Accuracy: 99
+  Place Kicking: 77
+  Swerve: 77
+  Ball Controll: 81
+  Goal Keeping Skills: 34
+  Response: 87
+  Explosive Power: 91
+  Dribble Speed: 67
+  Top Speed: 80
+  Body Balance: 99
+  Stamina: 99
+  Kicking Power: 86
+  Jump: 76
+  Tenacity: 79
+  Teamwork: 94
+Skills:
+ S14 - Deft Touch Skills
+ S06 - Long Range Drive
+
+--------------------
