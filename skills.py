@@ -7,18 +7,18 @@ playstyles = {
     'P03 - Trickster': ['RMF', 'LMF', 'RWF', 'LWF', 'SS'],
     'P04 - Darting Run': ['RMF', 'LMF', 'RWF', 'LWF', 'SS'],
     'P05 - Mazing Run': ['RMF', 'LMF', 'RWF', 'LWF', 'SS'],
-    'P06 - Pinpoint Pass': ['CB', 'RB', 'LB', 'DMF', 'CMF'],
+    'P06 - Pinpoint Pass': ['CB', 'RB', 'LB', 'DMF', 'CMF', 'SWP'],
     'P07 - Early Cross': ['RB', 'LB', 'RMF', 'LMF', 'RWF', 'LWF'],
     'P08 - Box to Box': ['DMF', 'CMF', 'AMF', 'RMF', 'LMF'],
     'P09 - Incisive Run': ['RB', 'LB', 'RMF', 'LMF', 'RWF', 'LWF'],
-    'P10 - Long Ranger': ['CB', 'RB', 'LB', 'DMF', 'CMF', 'AMF', 'RMF', 'LMF'],
+    'P10 - Long Ranger': ['CB', 'RB', 'LB', 'DMF', 'CMF', 'AMF', 'RMF', 'LMF', 'SWP'],
     'P11 - Enforcer': ['DMF', 'CMF'],
     'P12 - Goal Poacher': ['SS', 'CF'],
     'P13 - Dummy Runner': ['SS', 'CF'],
     'P14 - Free Roaming': ['CMF', 'AMF', 'RMF', 'LMF'],
     'P15 - Talisman': ['CMF', 'AMF', 'RMF', 'LMF'],
     'P16 - Fox in the Box': ['CF'],
-    'P17 - Offensive Sideback': ['CB', 'RB', 'LB'],
+    'P17 - Offensive Sideback': ['CB', 'RB', 'LB', 'SWP'],
     'P18 - Track Back': ['SS', 'CF']
 }
 # posibilidades de que le salga tal skill a un: delantero, medio, defensor, arquero

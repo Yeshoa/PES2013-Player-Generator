@@ -67,7 +67,7 @@ def save_to_txt(players):
             file.write("Shirt Name: {}\n".format(player["Shirt Name"]))
             file.write("Number: {}\n".format(player["Number"]))
             file.write("Foot: {}\n".format(player["Foot"]))
-            file.write("Positions: {}\n".format(player["Positions"]))
+            file.write("Position: {}\n".format(player["Positions"]))
             file.write("Injury Tolerance: {}\n".format(player["Injury Tolerance"]))
             file.write("Age: {}\n".format(player["Age"]))
             file.write("Height: {}\n".format(player["Length"]))
@@ -90,7 +90,7 @@ def save_to_txt(players):
             file.write("\n" + "-" * 20 + "\n")
 
 players = []
-players.append(generate_player("CF", 90, 9))
+players.append(generate_player("DMF", 90, 9))
 
 save_to_txt(players)
 print("Players saved to players.txt")
