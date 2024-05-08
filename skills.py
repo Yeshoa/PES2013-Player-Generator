@@ -56,7 +56,7 @@ def generate_skills(position, positions, rating):
   quant = random.choices([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], weights= finalWeights)[0]
   skills = []
   for _ in range(quant):
-    if random.randint(1, 10) > 8:
+    if random.randint(1, 10) > 8 and position != "GK":
       newSkill = generate_playstyle(position)
     else:
       newSkill = generate_skill(position)

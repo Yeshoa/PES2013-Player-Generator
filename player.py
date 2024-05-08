@@ -13,7 +13,7 @@ def generate_player(position, rating, number):
     player = {}
 
     name = "Player"
-    positions = generate_pos(position) if position != "GK" else [] # posiciones adicionales
+    positions = generate_pos(position) # posiciones adicionales
 
     player["Name"] = name
     player["Shirt Name"] = name
@@ -90,7 +90,7 @@ def save_to_txt(players):
             file.write("\n" + "-" * 20 + "\n")
 
 players = []
-players.append(generate_player("DMF", 90, 9))
+players.append(generate_player("CMF", 90, 9))
 
 save_to_txt(players)
 print("Players saved to players.txt")
