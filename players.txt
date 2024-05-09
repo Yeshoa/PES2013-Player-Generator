@@ -1,43 +1,44 @@
 Name: Player
 Shirt Name: Player
 Number: 9
-Foot: R
-Position: CMF* CMF, LMF
+Foot: L
+Position: GK* GK
 Injury Tolerance: A
-Age: 35
-Height: 201
-Weight: 90
+Age: 31
+Height: 191
+Weight: 87
 Form: 5
-Weak Foot Accuracy: 3
+Weak Foot Accuracy: 5
 Weak Foot Frequency: 2
 Attack Awareness: 2
-Defence Awareness: 3
+Defence Awareness: 2
 
 Stats:
-  Attack: 79
-  Defence: 82
-  Header Accuracy: 89
-  Dribble Accuracy: 84
-  Short Pass Accuracy: 79
-  Short Pass Speed: 80
-  Long Pass Accuracy: 86
-  Long Pass Speed: 82
-  Shot Accuracy: 70
-  Place Kicking: 70
-  Swerve: 76
-  Ball Controll: 82
-  Goal Keeping Skills: 32
-  Response: 72
-  Explosive Power: 81
-  Dribble Speed: 91
-  Top Speed: 76
-  Body Balance: 81
-  Stamina: 84
-  Kicking Power: 89
-  Jump: 63
-  Tenacity: 82
-  Teamwork: 69
+  Attack: 35
+  Defence: 86
+  Header Accuracy: 56
+  Dribble Accuracy: 61
+  Short Pass Accuracy: 49
+  Short Pass Speed: 51
+  Long Pass Accuracy: 36
+  Long Pass Speed: 56
+  Shot Accuracy: 57
+  Place Kicking: 57
+  Swerve: 47
+  Ball Controll: 55
+  Goal Keeping Skills: 93
+  Response: 84
+  Explosive Power: 89
+  Dribble Speed: 61
+  Top Speed: 50
+  Body Balance: 92
+  Stamina: 58
+  Kicking Power: 86
+  Jump: 91
+  Tenacity: 89
+  Teamwork: 93
 Skills:
- S07 - Shoulder Feint Skills
+ S01 - 1-touch Play
+ S26 - GK Long Throw
 
 --------------------

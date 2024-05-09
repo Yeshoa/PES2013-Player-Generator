@@ -90,7 +90,10 @@ def save_to_txt(players):
             file.write("\n" + "-" * 20 + "\n")
 
 players = []
-players.append(generate_player("CMF", 90, 9))
+all = ["GK", "CB", "LB", "RB", "DMF", "CMF", "LMF", "RMF", "AMF", "CF", "SS", "LWF", "RWF"]
+
+# players.append(generate_player(random.choice(all), 90, 9))
+players.append(generate_player("GK", 90, 9))
 
 save_to_txt(players)
 print("Players saved to players.txt")

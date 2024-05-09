@@ -2,6 +2,7 @@ import random
 import math
 import numpy as np
 nulo = 0.4
+gk = 0.6
 bot = 0.85
 bajo = 0.88
 medio = 0.93
@@ -20,39 +21,37 @@ def generate_stats(position, rating):
         # Calcular el valor medio ajustado
             
         if (weight > medio):
-            std_dev = 4  # Desviación habilidades clave
+            std_dev = 12  # Desviación habilidades clave
         else: 
             std_dev = random.uniform(4, 9) # desviación random
         adjusted_mean = mean * weight # en las habilidades no clave para nada para nada usar un random con alta desviación
         value = int(np.random.normal(adjusted_mean, std_dev))
         value = max(value, 0)  # Asegurarse de que no sea negativo
-        if value <= mean-25 and weight > bot: # si la habilidad random es demasiado baja para lo que es el jugador, le suma 20 para compensar un poco
+        if value <= mean-25 and weight > bot and position != "GK": # si la habilidad random es demasiado baja para lo que es el jugador, le suma 20 para compensar un poco
             print(stat, value, mean-25, value+20)
             value += 20
         value = min(value, 99)  # Asegurarse de que esté entre 0 y 99
-        if (weight > medio):
+        if (weight > medio and position != "GK"):
             key_stats[stat] = value  # Desviación habilidades clave
+        elif (position == "GK" and weight == top):
+            key_stats[stat] = value  # Desviación habilidades clave para arqueros
         stats[stat] = value
     
     key_average = sum(key_stats.values()) / len(key_stats)
     factor = mean / key_average
+    for stat in key_stats:
+        print(stat, stats[stat], end=" ")
+        if key_average > mean:
+            new_stat = int(key_stats[stat] * factor)
+            print(end="v ")
+        elif key_average < mean:
+            new_stat = int(key_stats[stat] * factor)
+            print(end="^ ")
+        new_stat = max(new_stat, 1)
+        new_stat = min(new_stat, 99)
+        stats[stat] = new_stat
+        print(stats[stat])
     print(factor, mean, key_average)
-    if factor != 1:
-        for stat in key_stats:
-            print(stat, stats[stat], end=" -> ")
-            if key_average > mean:
-                stats[stat] = int(key_stats[stat] * factor)
-            elif key_average < mean:
-                stats[stat] = int(key_stats[stat] * factor)
-            print(stats[stat])
-    """ if key_average > mean:
-        factor = mean / key_average
-        for stat in key_stats:
-            key_stats[stat] = int(key_stats[stat] * factor)
-    elif key_average < mean:
-        factor = mean / key_average
-        for stat in key_stats:
-            key_stats[stat] = int(key_stats[stat] * factor) """
     return stats
 
 # Definir promedio habilidades clave por posición
@@ -61,8 +60,8 @@ key_info = {
     "GK": (1.245, 18),
     "SWP": (1.81, 36),
     "CB": (1.79, 36),
-    "LB": (2.01, 43),
-    "RB": (2.01, 43),
+    "LB": (2.01, 38),
+    "RB": (2.01, 38),
     "DMF": (2.2, 44),
     "CMF": (2.3, 45),
     "LMF": (2.15, 44),
@@ -74,21 +73,15 @@ key_info = {
     "CF": (2.1, 45)
 }
 
-key_mean = {
-    "GK": 1, "SWP": 1, "CB": 1.79, "LB": 2.01, "RB": 2.01, "DMF": 2.2, "CMF": 2.3, "LMF": 2.15, "RMF": 2.15, "AMF": 2.15, "LWF": 2.05, "RWF": 2.05, "SS": 2.1, "CF": 2.1
-}
-key_add = {
-    "GK": 1, "SWP": 1, "CB": 36, "LB": 43, "RB": 43, "DMF": 44, "CMF": 45, "LMF": 44, "RMF": 44, "AMF": 46, "LWF": 43, "RWF": 43, "SS": 45, "CF": 45
-}
 """ HACER UNA GLOBAL PARA TWK TEN FK CUR """
 # Definir habilidades y sus pesos por posición
 stats_weights = {
     "GK": {
-        "Attack": nulo, "Defence": top, "Header Accuracy": bot, "Dribble Accuracy": bot, "Short Pass Accuracy": bot, "Short Pass Speed": bot,
-        "Long Pass Accuracy": bot, "Long Pass Speed": bot, "Shot Accuracy": bot, "Place Kicking": bot, "Swerve": bot, "Ball Controll": bot,
+        "Attack": nulo, "Defence": alto, "Header Accuracy": gk, "Dribble Accuracy": gk, "Short Pass Accuracy": gk, "Short Pass Speed": gk,
+        "Long Pass Accuracy": gk, "Long Pass Speed": gk, "Shot Accuracy": gk, "Place Kicking": gk, "Swerve": gk, "Ball Controll": gk,
         "Goal Keeping Skills": top, 
-        "Response": top, "Explosive Power": top, "Dribble Speed": bot, "Top Speed": bot, 
-        "Body Balance": top, "Stamina": bot, "Kicking Power": medio, "Jump": alto, 
+        "Response": top, "Explosive Power": alto, "Dribble Speed": gk, "Top Speed": gk, 
+        "Body Balance": top, "Stamina": gk, "Kicking Power": medio, "Jump": alto, 
         "Tenacity": medio, "Teamwork": medio,
     },
     "SWP": {
